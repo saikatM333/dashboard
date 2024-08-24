@@ -1,0 +1,420 @@
+/* dashboard.css */
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Dashboard Container */
+  .dashboard-container {
+    padding: 0;
+    max-width: inherit;
+    margin: 0 !important;
+    color: #333;
+  }
+  
+  .dashboard-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .dashboard-container h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #555;
+    /* border-bottom: 2px solid #e0e0e0; */
+    padding-bottom: 2px;
+    margin-top: 30px;
+  }
+  
+  /* Add Widget Button */
+  .add-widget-button {
+    background-color: white !important;
+    color: rgb(134, 132, 132) !important;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 20px;
+  }
+  
+  .add-widget-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Widget Grid */
+  .widget-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Widget Card Styles */
+  .widget-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    min-width: 200px;
+    max-width: 26%;
+    max-height: 30%;
+    min-height: 200px ;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease;
+    border-radius: 20px !important;
+  }
+  
+  .widget-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .widget-card h5 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .widget-card p {
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .widget-card .close-icon {
+    align-self: flex-end;
+    color: #ff1744;
+    cursor: pointer;
+  }
+
+
+  .widget-card {
+    position: relative; /* Allows absolute positioning of the close icon */
+    background-color: #fff; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    overflow: hidden; /* Ensures that content doesn't overflow the card's border-radius */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+  }
+  
+  .widget-card:hover {
+    transform: translateY(-4px); /* Slight lift effect on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  }
+  
+  .widget-card .MuiCardContent-root {
+    padding: 16px; /* Add padding inside the card content */
+  }
+  
+  .widget-card .MuiTypography-h5 {
+    font-weight: 500; /* Slightly bolder font for the title */
+    margin-bottom: 8px; /* Space below the title */
+  }
+  
+  .widget-card .MuiTypography-body1 {
+    color: #555; /* Slightly lighter color for the text */
+  }
+  
+  .widget-card .MuiIconButton-root {
+    position: absolute; /* Absolute positioning */
+    top: 8px; /* Distance from the top of the card */
+    right: 8px; /* Distance from the right of the card */
+    color: #888; /* Color of the close icon */
+  }
+  
+  .widget-card .MuiIconButton-root:hover {
+    color: #333; /* Darker color on hover */
+  }
+  
+  
+  /* Modal Styles */
+  .modal-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-box h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .modal-box button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .modal-box button:hover {
+    background-color: #0056b3;
+  }
+  
+
+
+
+  .dashboard {
+    padding: 20px;
+    background-color: #f7f9fc;
+  }
+  
+  .header {
+    background-color: #fff;
+    color: #333;
+    box-shadow: none;
+    padding: 10px 20px;
+  }
+  
+  .header-title {
+    flex-grow: 1;
+  }
+  
+  .search {
+    position: relative;
+    border-radius: 20px;
+    background-color: #eaeef3;
+    margin-right: 20px;
+    margin-left: 0;
+    width: 500px;
+    display: flex;
+    height: 40px ;
+    align-items: center;
+    justify-content: right;
+    padding-left: 10px ;
+    padding-right: 10px ;
+  }
+  
+  .search-icon {
+    padding: 10px;
+    height: 100%;
+    position: absolute;
+    pointer-events: none;
+    align-items: center;
+    justify-content: right;
+    flex: auto;
+   
+  }
+  
+  .input-root {
+    color: inherit;
+    width: 100%;
+  }
+  
+  .input-input {
+    padding: 10px 10px 10px 40px;
+    transition: width 0.3s;
+    width: 100%;
+  }
+  
+  .widget-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .widget-card {
+    flex: 1 1 30%;
+    min-width: 250px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-box {
+    background-color: #fff;
+    padding: 20px;
+    margin: auto;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  
+  .section-nav {
+    margin: 20px 0;
+  }
+  
+  .app-bar {
+    margin-bottom: 20px;
+    background-color: #fff !important;
+    box-shadow: none !important;
+    color: #000 !important;
+    width: inherit;
+    
+  }
+  
+  .title {
+    flex-grow: 1;
+  }
+  
+  .search {
+   
+    
+  }
+  
+  .search-icon {
+    padding: 0 8px;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: right;
+    pointer-events: none;
+  }
+  
+  .input-root {
+    color: inherit;
+  }
+  
+
+  /*circular */
+
+  .widget-card {
+  margin: 16px;
+  padding: 16px;
+  min-width: 250px;
+  position: relative;
+}
+
+.circular-bar-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.circular-bar {
+  color: #3f51b5;
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.circular-bar-text {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+.add-widget{
+  border: dashed gray !important;
+  width : 100% ;
+  height: 100%;
+  
+}
+
+.add-widget-cointainer
+{
+display : flex ;
+align-items: center;
+  justify-content: center;
+}
+
+/* model navabar */
+
+.tab-button .MuiTab-root {
+  background-color: transparent;
+  color: inherit; /* Keeps the text color as defined elsewhere */
+  padding: 10px 16px !important; /* Adjust padding as needed */
+  min-height: 25px ;
+  
+}
+
+.tab-button .Mui-selected {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background for the selected tab */
+  color: inherit; /* Keeps the selected tab's text color */
+}
+
+.tab-button .MuiTabs-indicator {
+  /* background-color: inherit; Ensures the indicator inherits the color, or you can define a custom color */
+  /* margin-top: px  !important; */
+  
+}
+/*cnaap typography*/
+
+.typography-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+}
+
+.add-widget-button {
+  margin: 0;
+}
+
+
+/*upper header */
+
+.title-upper-header {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+.home {
+  color: lightgray;
+  font-weight: bold;
+  font-size: 1rem; /* Adjust size as needed */
+  margin-right: 0.5rem; /* Adjust spacing as needed */
+}
+
+.separator {
+  margin-right: 0.1rem; 
+  color: lightgray;
+
+  /* Adjust spacing as needed */
+}
+
+.dashboard {
+  color: darkblue;
+  font-size: 1rem; /* Adjust size as needed */
+  background-color: transparent !important;
+  padding-left: 7px ;
+}
+/* .title h2{
+margin-left: 1.8rem ;
+} */
+
+.dash-cointainer
+{
+ padding-left: 1.5rem;
+ padding-right: 2rem;
+}
+
+.model-button
+{
+  display: flex ;
+  justify-content: right;
+  gap : 1rem;
+  
+}
